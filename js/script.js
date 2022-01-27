@@ -43,11 +43,11 @@ const root = new Vue({
             this.currentIndex = index;
         }
     },
-    // created() {
-    //     setInterval(() => {
-    //         this.currentIndex++;
-    //     }, 1000)
-    // }
+    created() {
+        setInterval(() => {
+            this.currentIndex++;
+        }, 1000)
+    }
 
     // setInterval 3000ms aggiungi +1 al currentIndex
 
