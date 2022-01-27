@@ -4,6 +4,11 @@ Partendo dal markup fornito in allegato, implementare la logica per far funziona
 Deve essere possibile scorrere le immagini cliccando sulle freccette.
 I pallini in basso devono illuminarsi in base all'immagine che sto visualizzando.
 Far si che cliccando i pallini, venga selezionata l'immagine corrispondente.
+
+Bonus:
+1- applicare l'autoplay allo slider: ogni 3 secondi, cambia immagine automaticamente
+2- quando il mouse va in hover sulle freccette o sui pallini l'autoplay si interrompe
+3 - l'autoplay riparte quando il mouse lascia le freccette o i pallini
 */
 
 const root = new Vue({
@@ -39,4 +44,3 @@ const root = new Vue({
 })
 
 
-// quando clicco sul dot setto il currentIndex all index di quel dot
