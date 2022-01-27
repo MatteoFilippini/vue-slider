@@ -14,7 +14,9 @@ Bonus:
 const root = new Vue({
     el: '#root',
     data: {
+
         currentIndex: 0,
+
         images: [
             'images/image1.jpg',
             'images/image2.jpg',
@@ -40,7 +42,17 @@ const root = new Vue({
         viewPic(index) {
             this.currentIndex = index;
         }
-    }
+    },
+    // created() {
+    //     setInterval(() => {
+    //         this.currentIndex++;
+    //     }, 1000)
+    // }
+
+    // setInterval 3000ms aggiungi +1 al currentIndex
+
+
+
 })
 
 
