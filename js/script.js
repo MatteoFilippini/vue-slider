@@ -45,7 +45,7 @@ const root = new Vue({
     },
     created() {
         setInterval(() => {
-            this.currentIndex++;
+            this.nextPic();
         }, 1000)
     }
 
