@@ -8,8 +8,8 @@ Far si che cliccando i pallini, venga selezionata l'immagine corrispondente.
 
 const root = new Vue({
     el: '#root',
-    currentIndex: 0,
     data: {
+        currentIndex: 0,
         images: [
             'images/image1.jpg',
             'images/image2.jpg',
@@ -18,6 +18,8 @@ const root = new Vue({
         ]
     },
     methods: {
-
+        isActive(index) {
+            return this.currentIndex === index;
+        }
     }
 })
