@@ -20,6 +20,14 @@ const root = new Vue({
     methods: {
         isActive(index) {
             return this.currentIndex === index;
+        },
+
+        nextPic() {
+            this.currentIndex++;
+        },
+
+        prevPic() {
+            this.currentIndex--;
         }
     }
 })
