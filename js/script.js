@@ -14,9 +14,11 @@ Bonus:
 const root = new Vue({
     el: '#root',
     data: {
-
+        // creo l'index che mi terra traccia di tutto lo slide
         currentIndex: 0,
-
+        // creo una varibile per fermare il setInterval
+        interval: 0,
+        // creo l'oggetto immagini
         images: [
             'images/image1.jpg',
             'images/image2.jpg',
@@ -25,31 +27,36 @@ const root = new Vue({
         ]
     },
     methods: {
+        // aggangio l'index delle immagini con quello dello slider
         isActive(index) {
             return this.currentIndex === index;
         },
 
+        // vai alla prossima immagine fino all'ultima poi rinizia
         nextPic() {
             if (this.currentIndex !== this.images.length - 1) this.currentIndex++;
             else this.currentIndex = 0;
         },
 
+        // vai alla precedete immagine fino alla prima poi rinizia
         prevPic() {
             if (this.currentIndex !== 0) this.currentIndex--;
             else this.currentIndex = this.images.length - 1
         },
 
+        // al click del bottone vado all'immagine stabilita
         viewPic(index) {
             this.currentIndex = index;
         }
     },
     created() {
-        setInterval(() => {
+        // ogni secondo
+        this.interval = setInterval(() => {
+            // chiamo la funzione che mi fambia l'immagine
             this.nextPic();
         }, 1000)
     }
 
-    // setInterval 3000ms aggiungi +1 al currentIndex
 
 
 
