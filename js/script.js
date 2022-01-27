@@ -11,10 +11,13 @@ const root = new Vue({
     currentIndex: 0,
     data: {
         images: [
-            'image/image1.png',
-            'image/image2.png',
-            'image/image3.png',
-            'image/image4.png',
+            'images/image1.jpg',
+            'images/image2.jpg',
+            'images/image3.jpg',
+            'images/image4.jpg',
         ]
+    },
+    methods: {
+
     }
 })
