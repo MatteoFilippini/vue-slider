@@ -30,6 +30,13 @@ const root = new Vue({
         prevPic() {
             if (this.currentIndex !== 0) this.currentIndex--;
             else this.currentIndex = this.images.length - 1
+        },
+
+        viewPic(index) {
+            this.currentIndex = index;
         }
     }
 })
+
+
+// quando clicco sul dot setto il currentIndex all index di quel dot

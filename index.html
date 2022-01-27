@@ -27,7 +27,8 @@
           <div class="slider d-flex align-items-center">
             <img class="img-fluid" :src="images[currentIndex]" />
             <div class=" slider-dots">
-              <div class="dot mx-2" v-for="(image,index) in images" :class="{active: isActive(index)}"></div>
+              <div class="dot mx-2" v-for="(image,index) in images" :class="{active: isActive(index)}"
+                @click="viewPic(index)"></div>
             </div>
           </div>
         </div>
