@@ -47,6 +47,11 @@ const root = new Vue({
         // al click del bottone vado all'immagine stabilita
         viewPic(index) {
             this.currentIndex = index;
+        },
+
+        // quando vado sui bottoni si ferma il setInterval
+        stop() {
+            clearInterval(this.interval)
         }
     },
     created() {
@@ -54,7 +59,7 @@ const root = new Vue({
         this.interval = setInterval(() => {
             // chiamo la funzione che mi fambia l'immagine
             this.nextPic();
-        }, 1000)
+        }, 2000)
     }
 
 
