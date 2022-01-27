@@ -25,8 +25,8 @@
         </div>
         <div class="col-6">
           <div class="slider d-flex align-items-center">
-            <img class="img-fluid" src="images/image1.jpg" />
-            <div class="slider-dots">
+            <img class="img-fluid" :src="images[currentIndex]" />
+            <div class=" slider-dots">
               <div class="dot mx-2" v-for="(image,index) in images" :class="{active: isActive(index)}"></div>
             </div>
           </div>

@@ -25,15 +25,11 @@ const root = new Vue({
         nextPic() {
             if (this.currentIndex !== this.images.length - 1) this.currentIndex++;
             else this.currentIndex = 0;
-
-
         },
 
         prevPic() {
             if (this.currentIndex !== 0) this.currentIndex--;
             else this.currentIndex = this.images.length - 1
-
-
         }
     }
 })
