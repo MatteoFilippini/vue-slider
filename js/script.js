@@ -52,18 +52,14 @@ const root = new Vue({
         // quando vado sui bottoni si ferma il setInterval
         stop() {
             clearInterval(this.interval)
-        },
-        play() {
-            // ogni secondo
-            this.interval = setInterval(() => {
-                // chiamo la funzione che mi fambia l'immagine
-                this.nextPic();
-            }, 3000)
         }
     },
     created() {
-        // alla crazione della pagina faccio partire lafunzione play
-        this.play()
+        // ogni secondo
+        this.interval = setInterval(() => {
+            // chiamo la funzione che mi fambia l'immagine
+            this.nextPic();
+        }, 3000)
     }
 
 
